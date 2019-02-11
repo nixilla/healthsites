@@ -110,6 +110,7 @@
         </div>
         <div id="navbar" class="collapse navbar-collapse pull-right">
             <ul class="nav navbar-nav">
+                <li><a href="https://medium.com/healthsites-io" target="_blank">Blog</a></li>
                 <li><a href="/#about">About</a></li>
                 <li><a href="{% url "map" %}">Map</a></li>
                 <li><a href="/#country-data">Country data</a></li>
@@ -135,10 +136,6 @@
                 <div class="option"><span></span><input type="radio" name="option" id="radio-place"
                                                         value="place"><span></span><label class="option"
                                                                                           for="radio-healthsite">place</label>
-                </div>
-                <div class="option"><span></span><input type="radio" name="option" id="radio-what3words"
-                                                        value="what3words"><span></span><label class="option"
-                                                                                               for="radio-what3words">what3words</label>
                 </div>
             </div>
             <input id="search-box" type="search" name="q" placeholder="search..."><input type="submit" value="search">
@@ -316,8 +313,7 @@
                                 Unighted Kingdom</p>
                             <input type="text" id="locality-physical-address-input" name="physical_address"
                                    placeholder="Physical Address" style="display: none; margin-bottom: 5px;"/>
-
-                            <p class="coordinates" style="margin-bottom: 5px"><b id="locality-what3words">test</b></p>
+                            
                             <p class="coordinates" id="locality-coordinates">lat: 0, long: 0</p>
 
                             <p class="coordinates" id="locality-coordinates-input"
@@ -564,10 +560,10 @@
     </form>
 </section>
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/leaflet-src.js"></script>
-<script type="text/javascript" src="https://code.jquery.com/jquery-1.10.2.js"></script>
+<script type="text/javascript" src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.7/d3.min.js"></script>
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/c3/0.4.10/c3.min.js"></script>
-<script type="text/javascript" src="https://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+<script type="text/javascript" src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
 <script type="text/javascript"
         src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 <script type="text/javascript"
