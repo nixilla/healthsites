@@ -15,6 +15,20 @@ CACHES = {
     }
 }
 
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.contrib.gis.db.backends.postgis',
+        'NAME': 'healthsites',
+        'USER': 'docker',
+        'PASSWORD': 'docker',
+        'HOST': '172.17.0.3',
+        # Set to empty string for default.
+        'PORT': '5432',
+    }
+}
+
+ALLOWED_HOSTS = ['*']
+
 # Make sure static files storage is set to default
 STATIC_FILES_STORAGE = 'django.contrib.staticfiles.storage.StaticFilesStorage'
 
@@ -61,7 +75,7 @@ try:
     # noinspection PyUnresolvedReferences
     import devserver  # noqa
     INSTALLED_APPS += (
-        'devserver',
+        'devserver'
     )
     # more details at https://github.com/dcramer/django-devserver#configuration
     DEVSERVER_DEFAULT_ADDR = '0.0.0.0'

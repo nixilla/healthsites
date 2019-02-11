@@ -3,6 +3,7 @@ from django.conf import settings
 from django.conf.urls import include, patterns, url
 from django.contrib import admin
 
+
 urlpatterns = patterns(
     '',
 
@@ -16,6 +17,7 @@ urlpatterns = patterns(
     url(r'', include('frontend.urls')),
     url(r'', include('localities.urls')),
     url(r'', include('social_users.urls')),
+    url('', include('social_django.urls', namespace='social')),
     url(r'api/', include('api.urls')),
 
 )

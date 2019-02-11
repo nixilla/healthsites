@@ -33,7 +33,8 @@ if 'raven.contrib.django.raven_compat' in INSTALLED_APPS:
         # release based on the git info.
         # Note from Tim: This won't work since we don't mount the root
         # of the git project into the docker container...
-        'release': raven.fetch_git_sha(os.path.dirname(os.pardir)),
+        # 'release': raven.fetch_git_sha(os.path.dirname(os.pardir)),
+        'release': 'develop',
     }
 
     MIDDLEWARE_CLASSES = (

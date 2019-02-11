@@ -11,3 +11,5 @@ Sphinx
 
 # pdb plus plus
 pdbpp
+
+django-extensions

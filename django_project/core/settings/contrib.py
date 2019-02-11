@@ -28,8 +28,17 @@ CRISPY_TEMPLATE_PACK = 'bootstrap3'
 # Added for userena
 AUTHENTICATION_BACKENDS = (
     'social_core.backends.openstreetmap.OpenStreetMapOAuth',
+    'social_core.backends.twitter.TwitterOAuth',
     'django.contrib.auth.backends.ModelBackend',
 )
+
+SOCIAL_AUTH_TWITTER_KEY = 'ruxNUPL499mKQVOO9aYSFAcoC'
+SOCIAL_AUTH_TWITTER_SECRET = '5o2UdD4fRGV0tgpscQ0kqxKR4iGRgtUHp1940aeEgfjlhKRtdv'
+
+SOCIAL_AUTH_GITHUB_KEY = 'a1b2c3d4'
+SOCIAL_AUTH_GITHUB_SECRET = 'e5f6g7h8i9'
+
+SOCIAL_AUTH_GITHUB_SCOPE = []
 
 SOCIAL_AUTH_LINKEDIN_OAUTH2_SCOPE = [
     'r_basicprofile', 'r_emailaddress', 'rw_company_admin', 'w_share']
@@ -90,6 +99,7 @@ INSTALLED_APPS += (
 MIDDLEWARE_CLASSES += (
     # For rosetta localisation
     'django.middleware.locale.LocaleMiddleware',
+    'social_django.middleware.SocialAuthExceptionMiddleware'
 )
 
 DEFAULT_FILE_STORAGE = (
